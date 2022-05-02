@@ -49,6 +49,7 @@ fn main() {
 mod board {
     use crate::Tier;
     use crate::Tiers;
+    use vec_list::vec_list;
     use wutil::init_static_array;
     use wutil::random::gen;
 
