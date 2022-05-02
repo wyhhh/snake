@@ -221,6 +221,7 @@ impl Snake {
             tail: (0, 0, 0),
         }
     }
+
     fn random() -> Self {
         let head = board::random_point();
         let tail_dir = *unsafe { DIR.get_unchecked(gen(0..8) as usize) };
