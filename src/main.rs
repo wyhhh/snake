@@ -134,14 +134,6 @@ pub enum Tier {
     Grass,
 }
 
-#[derive(Debug)]
-pub enum TierType {
-    Head,
-    Body,
-    Flower,
-    Grass,
-}
-
 #[derive(Debug, Clone, Copy, Default)]
 struct Snake {
     head: (i16, i16, usize),
