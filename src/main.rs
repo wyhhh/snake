@@ -16,8 +16,8 @@ use vec_list::*;
 use wutil::init_static_array;
 use wutil::random::gen;
 
-const SNAKES: usize = 3;
-const DEALY_MILLIS: u64 = 90;
+const SNAKES: usize = 4;
+const DEALY_MILLIS: u64 = 50;
 
 fn main() {
     crossterm::execute! {
@@ -51,7 +51,6 @@ fn main() {
 
         print!("\x1B[2J\x1B[1;1H");
     }
-    // println!("{:?}", size_of::<Layers>());
 }
 
 mod board {
@@ -89,16 +88,6 @@ mod board {
             let p = random_point();
             let tier = push(p, Tier::flower());
             (p.0, p.1, tier)
-        }
-    }
-
-    pub fn init() {
-        unsafe {
-            for row in &mut BOARD {
-                for ele in row {
-                    *ele = Tiers { tiers: vec_list![] };
-                }
-            }
         }
     }
 
