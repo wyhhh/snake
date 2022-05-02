@@ -1,14 +1,7 @@
 use core::fmt;
 use crossterm::cursor;
-use std::fmt::Display;
 use std::hint::unreachable_unchecked;
-use std::intrinsics::transmute;
 use std::io::stdout;
-use std::marker::PhantomData;
-use std::mem;
-use std::mem::size_of;
-use std::mem::MaybeUninit;
-use std::ptr::null_mut;
 use std::thread;
 use std::time::Duration;
 use std::time::Instant;
@@ -56,9 +49,6 @@ fn main() {
 mod board {
     use crate::Tier;
     use crate::Tiers;
-    use std::intrinsics::transmute;
-    use std::mem::size_of;
-    use vec_list::*;
     use wutil::init_static_array;
     use wutil::random::gen;
 
