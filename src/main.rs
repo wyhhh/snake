@@ -13,8 +13,8 @@ use std::thread;
 use std::time::Duration;
 use std::time::Instant;
 use vec_list::*;
-use wutil::random::gen;
 use wutil::init_static_array;
+use wutil::random::gen;
 
 const SNAKES: usize = 3;
 const DEALY_MILLIS: u64 = 90;
@@ -134,8 +134,6 @@ const DIR: [(i16, i16); 8] = [
     (1, 0),
     (1, 1),
 ];
-
-
 
 pub struct Tiers {
     tiers: VecList<Tier>,
